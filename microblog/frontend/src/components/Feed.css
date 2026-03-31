@@ -1,0 +1,11 @@
+.feed {
+  width: 100%;
+  max-width: 600px;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+}
+
+.replies-section {
+  background-color: #fafafa;
+  padding: 0.5rem;
+}

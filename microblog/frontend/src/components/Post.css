@@ -1,0 +1,56 @@
+.post {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 1rem;
+  transition: background-color 0.2s;
+}
+
+.post:hover {
+  background-color: #f7f7f7;
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.post-author {
+  font-weight: 600;
+  color: #1d9bf0;
+}
+
+.post-time {
+  color: #657786;
+  font-size: 0.875rem;
+}
+
+.post-content {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.post-actions {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #657786;
+  cursor: pointer;
+  font-size: 0.875rem;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.action-btn:hover {
+  color: #1d9bf0;
+}
+
+.action-btn.liked {
+  color: #e74c3c;
+}
