@@ -5,6 +5,7 @@ import { restoreAuth } from './slices/authSlice.js';
 import { Header } from './components/Header.jsx';
 import { Feed } from './components/Feed.jsx';
 import { Login, Register } from './components/Auth.jsx';
+import UserProfile from './components/UserProfile.jsx';
 import './App.css';
 
 function ProtectedRoute({ children, isAuthenticated, restoring }) {
@@ -36,6 +37,17 @@ function App() {
                 <div className="main-layout">
                   <Header />
                   <Feed />
+                </div>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/users/:username"
+            element={
+              <ProtectedRoute isAuthenticated={isAuthenticated} restoring={restoring}>
+                <div className="main-layout">
+                  <Header />
+                  <UserProfile />
                 </div>
               </ProtectedRoute>
             }

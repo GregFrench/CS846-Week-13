@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { likesAPI } from '../services/api.js';
 import './Post.css';
 
@@ -31,7 +32,9 @@ export function Post({ post, onLikeChange, showReplies = false, onReplyClick }) 
   return (
     <div className="post">
       <div className="post-header">
-        <span className="post-author">@{post.username || post.user_id}</span>
+        <Link to={`/users/${post.username || post.user_id}`} className="post-author-link">
+          <span className="post-author">@{post.username || post.user_id}</span>
+        </Link>
         <span className="post-time">
           {new Date(post.created_at).toLocaleDateString()}
         </span>

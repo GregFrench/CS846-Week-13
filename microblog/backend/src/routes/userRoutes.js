@@ -16,9 +16,7 @@ router.get(
       throw new NotFoundError('User');
     }
 
-    res.status(200).json({
-      user: userDAO.formatUser(user),
-    });
+    res.status(200).json(userDAO.formatUser(user));
   }),
 );
 

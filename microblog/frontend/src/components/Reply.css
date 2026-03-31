@@ -16,6 +16,15 @@
   font-size: 0.875rem;
 }
 
+.reply-author-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.reply-author-link:hover .reply-author {
+  text-decoration: underline;
+}
+
 .reply-time {
   color: #657786;
   font-size: 0.75rem;

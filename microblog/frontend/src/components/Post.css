@@ -19,6 +19,15 @@
   color: #1d9bf0;
 }
 
+.post-author-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-author-link:hover .post-author {
+  text-decoration: underline;
+}
+
 .post-time {
   color: #657786;
   font-size: 0.875rem;

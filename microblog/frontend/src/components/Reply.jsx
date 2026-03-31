@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { repliesAPI } from '../services/api.js';
 import './Reply.css';
 
@@ -6,7 +7,9 @@ export function Reply({ reply }) {
   return (
     <div className="reply">
       <div className="reply-header">
-        <span className="reply-author">@{reply.username || reply.user_id}</span>
+        <Link to={`/users/${reply.username || reply.user_id}`} className="reply-author-link">
+          <span className="reply-author">@{reply.username || reply.user_id}</span>
+        </Link>
         <span className="reply-time">
           {new Date(reply.created_at).toLocaleDateString()}
         </span>
